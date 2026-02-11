@@ -1,14 +1,12 @@
-Steps to run the app: 
-
+**Steps to run the app: **
 1. pip install -r requirements.txt
+2. Run the app 
+**streamlit run src/app.py**
 
-2 Run the app 
-streamlit run src/app.py
 
+**Description**: Built a Retrieval-Augmented Generation (RAG) assistant that ingests documents, generates embeddings, stores them in a FAISS vector database, retrieves relevant context based on user queries, and generates answers using an LLM. The system includes a Streamlit UI, persistent vector storage, and modular architecture to simulate a production-style GenAI pipeline.
 
-Description: Built a Retrieval-Augmented Generation (RAG) assistant that ingests documents, generates embeddings, stores them in a FAISS vector database, retrieves relevant context based on user queries, and generates answers using an LLM. The system includes a Streamlit UI, persistent vector storage, and modular architecture to simulate a production-style GenAI pipeline.
-
-GenAI system I built: 
+**GenAI system I built: **
 
 I built a document-based question-answering assistant using a Retrieval-Augmented Generation architecture. The system has two main pipelines: an ingestion pipeline and a query pipeline.
 
@@ -19,8 +17,7 @@ In the query pipeline, when a user asks a question through a Streamlit UI, the q
 
 I structured the project into separate modules for loading, retrieval, and generation, which reflects how production systems are typically designed. In a real enterprise setup, this architecture would be extended with caching, guardrails, and observability layers.
 
-
-“Flow step by step.”
+**Flow step by step:**
 
 1. The system works in five steps:
 2. Document ingestion and chunking
@@ -31,16 +28,16 @@ I structured the project into separate modules for loading, retrieval, and gener
 
 Retrieval ensures that the model answers based on grounded knowledge rather than relying purely on its training data, which significantly reduces hallucination.
 
-Architecture Explanation
+**Architecture Explanation**
 
-User → UI → Retriever → Vector DB → Context → LLM → Answer
+**User → UI → Retriever → Vector DB → Context → LLM → Answer**
 
 Retrieval reduces hallucination and improves factual accuracy by grounding answers in enterprise data.
 
-Why RAG Instead of Fine-Tuning
+**Why RAG Instead of Fine-Tuning**
 RAG is preferred when knowledge changes frequently or documents are large, because updating a vector database is much cheaper and faster than retraining or fine-tuning a model.
 
-Tradeoffs
+**Tradeoffs**
 Some key tradeoffs include chunk size selection, retrieval latency, embedding quality, and managing hallucinations. Larger chunks improve context but reduce retrieval precision, while smaller chunks improve retrieval but may lose semantic continuity.
 
 Improvements
@@ -49,13 +46,13 @@ Hybrid search (BM25 + vector)
 Guardrails for PII filtering
 Observability for latency and accuracy
 
-Learning: At scale, ingestion runs as batch pipelines, vector indexes are sharded, and retrieval services are deployed independently to reduce latency.
+**Learning:** At scale, ingestion runs as batch pipelines, vector indexes are sharded, and retrieval services are deployed independently to reduce latency.
 
 Latency: Latency mainly comes from embedding and LLM inference, so caching and smaller models are key optimization techniques.
 
-Elevator Pitch : I built a RAG-based knowledge assistant that retrieves context from a vector database and generates grounded answers using an LLM, with persistent storage and a UI to simulate a production architecture.
+**Elevator Pitch:** I built a RAG-based knowledge assistant that retrieves context from a vector database and generates grounded answers using an LLM, with persistent storage and a UI to simulate a production architecture.
 
-It demonstrates:
+**It demonstrates:**
 
 Distributed thinking
 Data pipeline thinking
@@ -64,8 +61,8 @@ AI integration
 UI layer
 
 
-Sample Input Questions to Try
-Easy queries (direct match)
+**Sample Input Questions to Try**
+**Easy queries (direct match)**
 
 How many sick leaves are allowed?
 
@@ -92,10 +89,7 @@ What rules should employees follow regarding expenses?
 These test chunk retrieval and context joining.
 
 
-
-High-Level Architecture
-
-Draw this (simple, powerful):
+**High-Level Architecture**
 
 Users (Web / Chat / API)
         |
@@ -120,6 +114,8 @@ Vector DB     Enterprise       |
      (Logs, Cost, Quality, Bias)
 
 
+
 image.png
+
 
 
