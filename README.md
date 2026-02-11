@@ -91,27 +91,9 @@ These test chunk retrieval and context joining.
 
 **High-Level Architecture**
 
-Users (Web / Chat / API)
-        |
-   API Gateway
-(Auth, Rate Limit, Audit)
-        |
-  GenAI Platform Layer
-(Orchestration / Agents)
-        |
- ┌───────────────┬───────────────┐
- │               │               │
-RAG Pipeline    Tool/MCP       Cache
-(Vector DB)    (APIs, DBs)    (Redis)
- │               │               │
-Vector DB     Enterprise       |
-(Docs)        Systems          |
-        \        |            /
-             LLM Gateway
-        (Model Routing Layer)
-                  |
-           Observability
-     (Logs, Cost, Quality, Bias)
+<img width="371" height="530" alt="image" src="https://github.com/user-attachments/assets/0670ae49-d36c-44d8-87b9-52ff43d079cf" />
+
+
 
 
 
