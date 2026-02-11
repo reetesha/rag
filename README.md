@@ -93,6 +93,12 @@ These test chunk retrieval and context joining.
 
 <img width="371" height="530" alt="image" src="https://github.com/user-attachments/assets/0670ae49-d36c-44d8-87b9-52ff43d079cf" />
 
+**App Output :**
+
+<img width="1031" height="546" alt="image" src="https://github.com/user-attachments/assets/364c3e48-f1fc-4273-a81e-916dbdb49025" />
+
+![Uploading image.png…]()
+
 
 
 
