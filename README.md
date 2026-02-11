@@ -1,12 +1,12 @@
-**Steps to run the app: **
+**Description**: Built a Retrieval-Augmented Generation (RAG) assistant that ingests documents, generates embeddings, stores them in a FAISS vector database, retrieves relevant context based on user queries, and generates answers using an LLM. The system includes a Streamlit UI, persistent vector storage, and modular architecture to simulate a production-style GenAI pipeline.
+
+**Steps to run the app:**
+
 1. pip install -r requirements.txt
 2. Run the app 
 **streamlit run src/app.py**
 
-
-**Description**: Built a Retrieval-Augmented Generation (RAG) assistant that ingests documents, generates embeddings, stores them in a FAISS vector database, retrieves relevant context based on user queries, and generates answers using an LLM. The system includes a Streamlit UI, persistent vector storage, and modular architecture to simulate a production-style GenAI pipeline.
-
-**GenAI system I built: **
+**GenAI system I built:**
 
 I built a document-based question-answering assistant using a Retrieval-Augmented Generation architecture. The system has two main pipelines: an ingestion pipeline and a query pipeline.
 
@@ -112,5 +112,6 @@ Vector DB     Enterprise       |
                   |
            Observability
      (Logs, Cost, Quality, Bias)
+
 
 
