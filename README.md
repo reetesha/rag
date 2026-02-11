@@ -114,8 +114,3 @@ Vector DB     Enterprise       |
      (Logs, Cost, Quality, Bias)
 
 
-
-image.png
-
-
-
