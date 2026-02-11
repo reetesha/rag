@@ -1,0 +1,14 @@
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-text-splitters==0.2.4
+langchain-openai==0.1.22
+langchain-ollama==0.1.1
+
+faiss-cpu==1.8.0.post1
+sentence-transformers==2.7.0
+
+streamlit==1.37.0
+pypdf==4.3.1
+
+openai==1.40.3
+tiktoken==0.7.0
